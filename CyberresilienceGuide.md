@@ -81,7 +81,7 @@ Examine the connections made by user and system apps,
 * Blokada: https://blokada.org/#download
 More user friendly than Pcapdroid, does pretty much the same,
 * Ooni: https://ooni.org/install/mobile
-Monitor network for censorship (not a discreet process, be careful).
+Monitor network for censorship (not a discrete process, be careful).
 
 Finally, be aware about what you install, a lot of apps are not monitored and contains malware to spy on your communications.
 
@@ -135,7 +135,7 @@ Check if your connection is not leaking: https://www.dnsleaktest.com
 * CalyxVPN: https://f-droid.org/en/packages/org.calyxinstitute.vpn/
 
 ### TOR (Orbot)
-Orbot proxies your traffic thru the TOR network, and can be an alternative to a VPN.
+Orbot proxies your traffic  through the TOR network, and can be an alternative to a VPN.
 
 * Orbot: https://guardianproject.info/apps/org.torproject.android/
 
@@ -160,7 +160,7 @@ An incredible resource for security and privacy: https://anonymousplanet.org/gui
 
 More private and secure tools: https://privacyguides.org
 
-This guide from EFF for protesting resume the precautionary measures when in a sensitive palace: https://ssd.eff.org/en/module/attending-protest
+This guide from EFF for protesting resume the precautionary measures when in a sensitive place: https://ssd.eff.org/en/module/attending-protest
 
 --- 
 
