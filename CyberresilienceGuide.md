@@ -1,11 +1,16 @@
 
 # Cyber resilience guide 
-## Version 0.1 (2022)
+## Version 0.2 (09-2022)
 
-Reddit: @sec4all
+Reddit: /user/sec4all
+
+shared during these events : 
+
+- Russian aggression on Ukraine (03-2022) 
+- Iranian protests (09-20222)
+
 
 # GUIDE
-
 Most apps are hosted on Fdroid, an open source alternative of PlayStore.
 You can find alternatives, just make sure they're reviewed by trustworthy sources.
 
@@ -29,7 +34,7 @@ Be aware that the adversary must have limited ability to monitor short-range com
 
 And the manual to begin with: https://briarproject.org/manual/
 
-#### SMS
+#### The case of SMS (and emails)
 The case of SMS is tricky, but is the main choice for most of us. The fact is, GSM networks weren't designed with privacy and security in mind, so be aware of multiple vulnerabilities.
 * SIM card tracking (ICCID),
 * IMEI tracking (serial number),
@@ -47,7 +52,12 @@ from another Redditor. They can be very restrictive, but they show how bad it ca
 
 Unfortunately, mitigating is not easy for SMS and calls.
 
-### Other connections
+#### Emails
+Emails are fine most often, but to discuss sensitive subjects or share important informations, emails are not robust against threat actors.
+
+But if needed, you should use a provider that encrypts your mailbox (Tutanota, Protonmail)
+
+### Other connections (Wifi,Bluetooth...)
 *Common myth debunked*:
 
 * Airplane mode disables most of the device's radios (carrier signal, Bluetooth, Wi-Fi) but **not NFC or GPS.**
@@ -68,8 +78,23 @@ That's the case for **Telegram**, a lot of factors such as bots attacks and meta
 * Signal: https://signal.org/
 Well known, good security features (sealed sender, PIN code locking...), messages and audio/video calls are End to End encrypted.
 
+As Briar, a recent project "cwtch" route your messages thru Tor, and you can host your own server:
+* Cwtch: https://cwtch.im 
+
+## When apps get blocked ⚠️ 
+### Change the DNS
+Often, authoritative governments tends to block access to encrypted messaging servers, so users can't use it anymore.
+
+Using a VPN can surely help, but it is sometimes also blocked, we can then try to change the DNS (protocol to resolve domains) as Internet providers often agree to block certain sites from their DNS (used by default on most routers)
+
+Cloudflare has a tool that automatically does this without configurations needed:
+
+* Cloudflare Warp: https://cloudflarewarp.com/ 
+
+
 ## Inspecting and Hardening your smartphone
 
+Major rule: ENCRYPT as much as possible, have strong password, disable fingerprint when going to protests, 
 Some tools help you monitor networks and requests passing by your smartphone.
 
 * PilferShush Jammer: https://f-droid.org/en/packages/cityfreqs.com.pilfershushjammer/
@@ -83,14 +108,18 @@ More user friendly than Pcapdroid, does pretty much the same,
 * Ooni: https://ooni.org/install/mobile
 Monitor network for censorship (not a discrete process, be careful).
 
-Finally, be aware about what you install, a lot of apps are not monitored and contains malware to spy on your communications.
+⚠️ Finally, be aware about what you install, a lot of apps are not monitored and contains malware to spy on your communications.
 
 For medium/advanced users, you could even compare the hash of the app with the expected one from the website:
 * Deadhash: https://codedead.com/software/deadhash/
 
+* Deleting files (or wiping your phone): https://f-droid.org/en/packages/us.spotco.extirpater/ 
+
 ### Panic button
 A tool that brings a panic button for your smartphone, and when triggered, it could delete some apps and files you judge too sensitive.
 * Ripple: https://guardianproject.info/apps/info.guardianproject.ripple/
+
+For Apple users, you can now consider the [Lockdown Mode](https://support.apple.com/en-us/HT212650).
 
 ### Physical security
 If you leave a place, and want to make sure nobody's snooping around, Haven can monitor microphone audio and camera video directly from a smartphone, and send the alert to a phone number and/or device.
@@ -101,8 +130,8 @@ If you leave a place, and want to make sure nobody's snooping around, Haven can 
 
 You might have sensitive data such as governmental documents you need to keep secure. Some apps let you create an encrypted volume directly on your smartphone.
 
-* Droidfs: https://f-droid.org/en/packages/sushi.hardcore.droidfs/
-sets up encrypted volumes managed by passwords.
+Sets up encrypted volumes managed by passwords:
+* Droidfs (smartphone): https://f-droid.org/en/packages/sushi.hardcore.droidfs/
 
 For computers: https://www.veracrypt.fr
 
@@ -113,7 +142,7 @@ Store those passwords in a password manager !
 If you have doubts about your computer being infected, or want to open a file in a more restricted place, you can run a virtual machine to test it.
 
 * Virtualbox: https://www.virtualbox.org/
-(see the part "Phishing and URL" for more tools).
+* Qemu: https://www.qemu.org/
 
 ## VPN
 While using Wi-Fi or cellular network, your Internet Service Provider can snoop on the traffic, or the router/public Wi-Fi can be compromised.
@@ -122,7 +151,9 @@ That's where a VPN is useful (in addition to the possibility of accessing blocke
 
 Attention, some of them have tight links with [questionable companies](https://restoreprivacy.com/kape-technologies-owns-expressvpn-cyberghost-pia-zenmate-vpn-review-sites/), the ones I put are just "safe" enough from now, things can evolve quickly.
 
-Check if your connection is not leaking: https://www.dnsleaktest.com
+⚠️ A lot of "most downloaded" VPNs on Play/Apple store are shady ones that can be owned by governments.
+
+Also, you could check if your connection is not leaking: https://www.dnsleaktest.com
 
 ### Accounts needed
 
@@ -140,11 +171,21 @@ Orbot proxies your traffic  through the TOR network, and can be an alternative t
 * Orbot: https://guardianproject.info/apps/org.torproject.android/
 
 ## HUMAN SIDE
-Be careful about what you post online. Every data is sensitive, even the ones you don't suspect.
 
- Delete metadata from pictures on Android:
+Managing human risks is the most sensitive aspect of cybersecurity, this is called OPSEC, and you should care.
+
+Somes rules:
+
+- Be careful about what you post online, nothing is truly private
+- Every data is sensitive, even the ones you don't suspect (date, time...)
+- Blur faces on pictures (especially during protests)
+- Use multiple tools/personas when interacting online
+
+
+Delete metadata from pictures on Android:
  
 * Scrambledeggsif: https://f-droid.org/en/packages/com.jarsilio.android.scrambledeggsif/
+
 
 ## Phishing and URL
 
@@ -155,7 +196,7 @@ Test a file, hash:
 * https://virustotal.com
 * https://www.joesandbox.com
 
-## Other good links
+## Other good resources
 An incredible resource for security and privacy: https://anonymousplanet.org/guide.html
 
 More private and secure tools: https://privacyguides.org
